@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block titulo %}
+
+    Descripcion
+   
+    
+
+{% endblock  %}
+{% block contenido %}
+<img class="detalleimg" src="/media/{{p.foto}}" alt="" width="850px" height="500px">
+    <div class="float">
+
+       
+    
+        <h1> {{p.marca}} {{p.nombre}}  </h1>
+        
+        <p><b>Stock:</b> {{p.stock}} unidades</p>
+        <p><b>Modelo:</b> {{p.modelo}} </p>
+        <p><b>Combustible:</b> {{p.combustible}} </p>
+        <p><b>Concesionario:</b> {{p.concesionario}} </p>
+        <!--
+        
+            {% for c in categoria %}
+                <span class="label label-info"> {{ c.nombre }} </span>
+            {% endfor %} 
+        
+            {% if p.categoria.all %}
+                <h2>Categorias</h2>
+                {% for pc in p.categoria.all %}
+                    {{pc}}
+                {% endfor %}
+            {% else %}
+                <h3>Sin Categorias</h3>
+            {% endif %}
+        -->
+        <br>
+        <a class="btn btn-primary" href="/lista_auto/">Regresar a la lista</a>
+    </div>
+
+        
+{% endblock %}  

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block titulo %}
+        Lista de Autos 
+{% endblock %}
+{% block contenido %}
+    <h1>Lista de Autos</h1>
+    {% if user.is_authenticated and user.is_superuser  %}
+    <a class="btn btn-primary btn-lg" href="/agregar_auto">Agregar Auto</a>
+    {% endif %}
+    <div class="table-responsive">
+
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Foto</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Año</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for p in lista %}
+                <tr>
+                  <th scope="row"><img src="/media/{{ p.foto }}" width="200"></th>
+                  <td class="alingtd">{{p.marca}}</td>
+                  <td class="alingtd"> {{p.modelo}}</td>
+                  <td class="alingtd">{{p.nombre}}</td>
+                  {% if user.is_authenticated and user.is_superuser %}
+                    <td class="alingtd"><a class="btn btn-primary" href="/ver_auto/{{p.id}}" >Detalle</a></td>
+                    <td class="alingtd"><a class="btn btn-primary" href="/editar_auto/{{p.id}}" >Editar</a></td>
+                    <td class="alingtd"><a class="btn btn-primary" href="/eliminar_auto/{{p.id}}" >Eliminar</a></td>
+                  {% else %}
+                    <td><a class="btn btn-primary" href="/ver_auto/{{p.id}}" >Detalle</a></td>
+                  {% endif %}
+  
+                </tr>
+                
+                {% endfor %}
+              </tbody>
+            </table>
+    </div>
+        
+{% endblock %}  

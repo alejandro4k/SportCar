@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    REGISTRAR PERFIL
+{% endblock %}
+
+{% block contenido %}
+    
+    <div class="formcenter ">
+        
+        <form class="formbackground" action="" method="POST" enctype="multipart/form-data">
+            <div class="">
+                    {% csrf_token %}
+                    {{ form_1.as_p }}
+                    {{ form_2.as_p }}
+                
+                    <input class="btn btn-primary" type="submit" value="Crear Perfil">
+            </div>
+    
+            
+    
+        </form>
+    </div>
+
+
+{% endblock %}

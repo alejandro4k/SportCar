@@ -1,0 +1,85 @@
+div.formdiv{
+    padding: 10px;
+    
+}
+
+a.register{
+    margin-left: 100px;
+    text-decoration: none;
+    
+}
+div.contacto{
+    padding: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.form-signin{
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+
+}
+
+body{
+    background: url(../imagenes/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #fff;
+}
+.formcenter{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px;
+   
+}
+img.detalleimg{
+    float: right;
+}
+div.float{
+    background-color: #212529c7;
+    padding: 16px;
+}
+.btn{
+    margin-bottom: 10px;  
+}
+.container{
+    padding-top: 20px;
+    
+    
+}
+div.scrollmenu {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #212529c7;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+.table{
+    background-color: #212529c7;
+}
+td.alingtd{
+    padding-top: 40px;;
+    justify-content: center;
+    align-content: center;
+    
+}
+form.formbackground{
+    padding: 15px;
+    background-color: #212529c7;
+
+}

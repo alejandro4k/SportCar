@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %}
+
+    Descripcion
+   
+    
+
+{% endblock  %}
+{% block contenido %}
+   
+    <img src="/media/{{p.foto}}" alt="" width="400">
+    <h2>{{p.nombre}}</h2>
+    <br>
+    <a class="btn btn-primary" href="/lista_marca/">Regresar a la lista</a>
+
+        
+{% endblock %}  

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block titulo %}
+    Inicio
+{% endblock  %} 
+{% block contenido %}
+
+
+        <div class="formdiv">
+
+
+        <h2> {{msj}} </h2>
+        
+                <form class="form-signin" action="" method="POST" >
+                    <img src="../static/imagenes/mustang.ico" alt="">
+                    
+                    <div class="form-group">
+
+                            {% csrf_token %}
+                            
+                            {{ formulario.as_p }}
+                        </div>
+                        <button type="submit" class="btn btn-primary" >Login</button>
+                    <a class="btn btn-primary" href="/register">Registrarse</a>
+                </form>
+        </div>
+        
+
+
+{% endblock  %} 
+
+
+    

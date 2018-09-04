@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block titulo %}
+    Descripcion
+{% endblock  %}
+{% block contenido %}
+
+{{p.nombre}}
+
+<p><b>Ciudad:</b> {{p.ciudad}} </p>
+<p><b>Direccion:</b> {{p.direccion}} </p>
+
+<a href="/lista_concesionario/">Regresar a la lista</a>
+
+
+
+{% endblock  %}

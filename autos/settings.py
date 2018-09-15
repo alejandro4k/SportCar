@@ -25,7 +25,7 @@ SECRET_KEY = 'a16&!==lr!q%df-jfgtpsa(#@#$p$16lp3mq!h_+w7hq@lv7i8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sportcardeluxe.herokuapp.com']
 
 
 # Application definition
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'autos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'daq4o4p516uud5',
+        'USER': 'chqfghzxzlyiop',
+        'PASSWORD': '0f062a94ef1d46f087a8dc6457e04aa5e9be1762869b322da48f271493c25736',
+        'HOST': 'ec2-174-129-32-37.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 

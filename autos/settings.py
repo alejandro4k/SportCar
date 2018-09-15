@@ -25,7 +25,7 @@ SECRET_KEY = 'a16&!==lr!q%df-jfgtpsa(#@#$p$16lp3mq!h_+w7hq@lv7i8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sportcardeluxe.herokuapp.com']
 
 
 # Application definition

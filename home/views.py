@@ -5,7 +5,8 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
-
+from django.http import HttpResponse
+from django.core import serializers
 
 # Create your views here.
 def vista_contacto(request):
@@ -210,4 +211,7 @@ def vista_busqueda_marca(request, marca_auto):
     busqueda = Auto.objects.filter(marca__nombre__iexact = marca_auto)
     return render (request, 'lista_marca_auto.html', locals())    
 
-    
+
+def ws_auto_vista(request):
+    data = serializers.serialize('json',Auto.objects.filter(status = True))
+    return HttpResponse(data, content_type ='application/json') 

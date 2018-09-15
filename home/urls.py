@@ -27,5 +27,6 @@ urlpatterns =[
     path('register/', vista_register, name='vista_register'),
     path('vista_crear_perfil/', vista_crear_perfil, name='vista_crear_perfil'),
     path('lista_perfil/', lista_perfil, name='lista_perfil'),
+    path('ws/auto/', ws_auto_vista, name='ws_auto_vista')
 
 ]
